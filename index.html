@@ -110,6 +110,29 @@ tsToDate();
       <a href="https://time-zone-converter.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
         <div style="font-size:13px;font-weight:600;color:#f1f5f9">Time Zone Converter</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Converters</div></a>
     </div>
+<section id="seo-content">
+  <style>
+    #seo-content{max-width:760px;margin:2.5rem auto;padding:0 1.25rem 3rem;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;color:#334155;line-height:1.7}
+    #seo-content h2{font-size:1.35rem;color:#0f172a;margin:2rem 0 .75rem}
+    #seo-content h3{font-size:1.05rem;color:#0f172a;margin:1.25rem 0 .5rem}
+    #seo-content p,#seo-content li{font-size:.95rem}
+    #seo-content .example{background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:1rem 1.25rem;margin:1rem 0}
+    @media (prefers-color-scheme:dark){#seo-content{color:#cbd5e1}#seo-content h2,#seo-content h3{color:#f1f5f9}#seo-content .example{background:#1e293b;border-color:#334155}}
+  </style>
+  <p>The Unix timestamp converter turns epoch time into a readable calendar date and back again, so developers, data analysts, and anyone working with logs or APIs can quickly make sense of numbers like <code>1735689600</code>. Paste a timestamp to see the exact UTC and local date, or pick a date to generate the corresponding epoch value. It runs entirely in your browser, so nothing you enter is sent to a server.</p>
+  <h2>How the Unix Timestamp Converter Works</h2>
+  <p>A Unix timestamp counts the seconds that have passed since the Unix Epoch — midnight UTC on 1 January 1970. To convert a timestamp to a date, the tool adds that number of seconds to the epoch and formats the result in both UTC and your browser's local time zone. To go the other way, it measures the seconds between your chosen date and the epoch, giving you the exact integer to store in a database or send to an API.</p>
+  <p>Because many systems report time in milliseconds rather than seconds, the converter detects the magnitude of your input automatically: a 13-digit number is treated as milliseconds and a 10-digit number as seconds. This avoids the common mistake of a date landing thousands of years in the future. Storing time as a single number is popular precisely because it sidesteps time-zone and formatting ambiguity — the same timestamp represents the same instant everywhere in the world, and only the display layer needs to worry about local time and daylight saving.</p>
+  <div class="example"><strong>Example 1:</strong> The timestamp <code>1735689600</code> converts to <strong>Wed, 01 Jan 2025 00:00:00 UTC</strong> — a clean start-of-year value often used in database seeds and cron schedules.</div>
+  <div class="example"><strong>Example 2:</strong> A JavaScript <code>Date.now()</code> value such as <code>1735689600000</code> (13 digits, milliseconds) is divided by 1000 and resolves to the same instant, showing how seconds and milliseconds line up. Multiplying a seconds value by 1000 converts it back to the millisecond form that JavaScript expects.</div>
+  <h2>Frequently Asked Questions</h2>
+  <h3>What is a Unix timestamp?</h3>
+  <p>A Unix timestamp is the number of seconds elapsed since 1 January 1970 00:00:00 UTC (the Unix Epoch). It is widely used in programming and databases.</p>
+  <h3>What is the difference between seconds and milliseconds timestamps?</h3>
+  <p>Standard Unix timestamps are in seconds. JavaScript and many APIs use milliseconds (multiply seconds by 1000). This tool handles both automatically.</p>
+  <h3>What is the maximum Unix timestamp?</h3>
+  <p>The 32-bit Unix timestamp will overflow on 19 January 2038 — known as the Year 2038 problem. 64-bit systems extend this to year 292,277,026,596.</p>
+</section>
 </body>
 <!-- built: 1785358916453 -->
 </html>
